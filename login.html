@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <a href="figures.html" class="card">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Créer un compte</h1>
+        <form id="signupForm">
+          <div class="input-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message" id="emailError"></span>
+          </div>
+          <div class="input-group">
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" required>
+            <span class="error-message" id="passwordError"></span>
+          </div>
+          <button type="submit">S'inscrire</button>
+    </form>
+      </div>
+      <script>
+
+
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const signupForm = document.getElementById('signupForm');
+const emailError = document.getElementById('emailError');
+const passwordError = document.getElementById('passwordError');
+
+signupForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // منع الإرسال الافتراضي للنموذج
+
+  let isValid = true;
+
+  // التحقق من صحة البريد الإلكتروني
+  const emailPattern = /^[a-zA-Z]{4}\d{2}@gmail\.com$/;
+  if (!emailPattern.test(emailInput.value)) {
+    emailError.textContent = 'صيغة البريد الإلكتروني غير صحيحة.';
+    isValid = false;
+  } else {
+    emailError.textContent = '';
+  }
+
+  // التحقق من صحة كلمة المرور
+  const passwordPattern = /^(?=.*[A-Z])[a-zA-Z\d]{4,}$/;
+  if (!passwordPattern.test(passwordInput.value)) {
+    passwordError.textContent = 'كلمة المرور يجب أن تحتوي على حرف كبير واحد على الأقل وثلاثة أحرف أخرى أو أرقام.';
+    isValid = false;
+  } else {
+    passwordError.textContent = '';
+  }
+
+  // إذا كانت جميع المدخلات صحيحة، يمكنك إرسال النموذج هنا
+  if (isValid) {
+    // ... كود إرسال النموذج ...
+  }
+});
+
+
+      </script>
+</body>
+</html>

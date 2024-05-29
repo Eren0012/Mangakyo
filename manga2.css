@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+
+nav {
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu ul li {
+    margin-left: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.menu ul  li:last-child a { 
+    border: 2px solid lightblue; 
+    padding: 8px 15px; 
+    border-radius: 5px; 
+}
+.menu ul  li:last-child a:hover { 
+    background-color: lightblue; 
+    color: white;}
+
+
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.blue {
+    color: blue;
+}
+.maincont{
+    margin: auto;
+    
+    width: 90%;
+    max-width: 100vh;
+  }
+  .maincont h1{
+      text-align: center;
+      display: flex;
+      font-size: 3rem; 
+  }
+  .maincont h1 img {
+    height: 1.5em;          /* Set image height relative to font size */
+    margin-left: 0.5em;     /* Add some spacing between text and image */
+  }
+  .manga-container {
+    display: flex; /* Arrange items in a row */
+    justify-content: space-around; /* Distribute items evenly */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    width: 90%; /* Adjust width as needed */
+    max-width: 1200px; /* Limit maximum width */
+    margin: 20px auto; /* Center the container */
+  }
+  
+  .manga-item {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange content vertically */
+    width: calc(33.33% - 20px); /* Adjust width for 3 items per row */
+    margin-bottom: 20px; /* Add spacing between items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  .manga-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+  }
+  
+  .manga-info {
+    padding: 15px;
+    text-align: center;
+  }
+  .rounded-button {
+    background-color: white; /* Light gray background */
+    border: 1px solid black;
+    color: black;
+    padding: 15px 32px; /* Adjust padding as needed */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 25px; /* Creates the rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+  }
+  
+  .rounded-button:hover {
+    background-color: black;
+    color: white; /* Change text color to white on hover for contrast */
+  }
+  footer {
+    background-color: #151515; /* Dark background */
+    color: #999; /* Light gray text */
+    padding: 20px 40px; /* Add padding */
+    font-family: Arial, sans-serif; /* Set font */
+  }
+  
+  .footer-container {
+    display: flex; /* Arrange columns in a row */
+    justify-content: space-around; /* Evenly space columns */
+  }
+  
+  .column {
+    flex: 1; /* Make columns flexible */
+    margin: 0 10px; /* Add some margin between columns */
+  }
+  
+  h4 {
+    color: #f2c94c; /* Crunchyroll orange */
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+  }
+  
+  a {
+    color: #999;
+    text-decoration: none;
+  }
+  
+  .image-container {
+    text-align: right; /* Align image to the right */
+  }
+  
+  .image-container img {
+    max-width: 150px; /* Adjust image size as needed */
+    height: auto;
+  }
+  
+ 
+  
+  .copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px; /* Smaller copyright text */
+  }
+  
+  /* Responsive Styles for Mobile (adjust breakpoint as needed) */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Stack columns vertically */
+    }
+    .column {
+      margin: 10px 0; /* Adjust margin for vertical stacking */
+    }
+    .image-container {
+      text-align: center;
+    }
+    .back-to-top {
+      margin: 10px auto; /* Center back-to-top button */
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    
+    nav {
+        flex-direction: column;
+    }
+
+    ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+    .card {
+        width: calc(100% - 20px);}
+    }

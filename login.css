@@ -1,0 +1,15 @@
+/* تصميم النموذج (يمكنك تخصيصه) */
+.container {
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+  }
+  
